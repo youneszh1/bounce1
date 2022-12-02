@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+h1{
+    color: aliceblue;
+    margin-left:30%;
+    margin-top: 30%;
+}
+
+:root{
+    --primary: gold;
+}
+
+.bounce{
+    display: flex;
+    position: absolute;
+    content: '';
+    margin-top: -10%;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: var(--primary);
+    transform-origin: bottom center;
+    animation: bounce 0.5s cubic-bezier(0.42, 0, 0.54, 0.11) alternate infinite;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translate(0, -150%) scaleX(1) scaleY(1);
+    }
+    100%{
+        transform: translate(0, 150%) scaleX(1.1) scaleY(0.9);
+    }
+}
